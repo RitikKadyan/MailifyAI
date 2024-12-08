@@ -1,0 +1,93 @@
+/* src/App.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh; /* Use full viewport height */
+}
+
+.form-container, .output-container {
+  flex: 1;
+  margin: 0 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow-y: auto; /* Ensure vertical scroll if content overflows */
+}
+
+.form-container {
+  max-height: 90%; /* Let it grow based on content */
+  border-right: 1px solid #ddd;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input.short-input, textarea.tall-input {
+  width: 80%; /* Adjust the width */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea.tall-input {
+  height: 100px; /* Initial height */
+  resize: vertical; /* Allows dynamic resizing */
+  overflow: auto;
+}
+
+button { 
+  background-color: #007bff; 
+  color: #fff; 
+  border: none; 
+  padding: 10px 20px; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  font-size: 16px; 
+  font-weight: bold; 
+  transition: background-color 0.3s, transform 0.3s; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+} 
+
+button:hover { 
+  background-color: #0056b3; 
+} 
+
+button:active { 
+  background-color: #004494; 
+  transform: scale(1);
+}
+
+.output-container {
+  max-height: 90%; /* Let it grow based on content */
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.output-container h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.output-container p {
+  white-space: pre-line;
+  line-height: 1.6;
+  font-size: 1.1em;
+  overflow: auto;
+}
