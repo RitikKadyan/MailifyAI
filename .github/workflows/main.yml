@@ -28,8 +28,9 @@ jobs:
         run: | 
           git config --global user.name "github-actions[bot]" 
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-      
+
       - name: Deploy to GitHub Pages
         run: npm run deploy
         env:
+          REACT_APP_GOOGLE_AI_API_KEY: ${{ secrets.REACT_APP_GOOGLE_AI_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
