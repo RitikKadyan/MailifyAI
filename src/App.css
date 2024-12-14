@@ -91,3 +91,9 @@ button:active {
   font-size: 1.1em;
   overflow: auto;
 }
+
+.short-input::placeholder,
+.tall-input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
