@@ -1,14 +1,25 @@
 import React, { useState } from 'react';
 import BusinessForm from './components/BusinessForm.tsx';
 import { generateEmail } from './api/googleAI.ts';
+import { CircularProgress } from '@mui/material';
 import './App.css';
 
 const App: React.FC = () => {
     const [emailTemplate, setEmailTemplate] = useState<string>('');
+    const [isLoading, setIsLoading] = useState<boolean>(false);
 
     const handleSubmit = async (values: { name: string; industry: string; targetAudience: string; productDetails: string; }) => {
-        const emailContent = await generateEmail(values);
-        setEmailTemplate(emailContent);
+        setIsLoading(true); // Show loading spinner
+        setEmailTemplate(''); // Clear previous email
+        try {
+            const emailContent = await generateEmail(values);
+            setEmailTemplate(emailContent);
+        } catch (error) {
+            console.error('Error generating email:', error);
+            setEmailTemplate('Failed to generate email. Please try again.');
+        } finally {
+            setIsLoading(false); // Hide loading spinner
+        }
     };
 
     return (
@@ -18,11 +29,18 @@ const App: React.FC = () => {
                 <BusinessForm onSubmit={handleSubmit} />
             </div>
             <div className="output-container">
-                {emailTemplate && (
-                    <div>
-                        <h2>Generated Email Template</h2>
-                        <p>{emailTemplate}</p>
+                {isLoading ? (
+                    <div className="loading-container">
+                        <CircularProgress />
+                        <p>Generating email, please wait...</p>
                     </div>
+                ) : (
+                    emailTemplate && (
+                        <div>
+                            <h2>Generated Email Template</h2>
+                            <p>{emailTemplate}</p>
+                        </div>
+                    )
                 )}
             </div>
         </div>
