@@ -1,46 +1,66 @@
-# Getting Started with Create React App
+# MailifyAI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+MailifyAI is an AI-powered email marketing application that helps businesses create personalized marketing emails using advanced natural language processing. By leveraging the Google Gemini API (a large language model), MailifyAI enables businesses to automate and streamline their email marketing campaigns, improving engagement and boosting ROI.
 
-## Available Scripts
+## Features
+- **AI-Powered Personalization**: Automatically generates personalized email content for your target audience based on input data.
+- **Google Gemini API Integration**: Utilizes the cutting-edge Google Gemini API to generate high-quality email content using AI.
+- **Customizable Templates**: Easily create and customize dynamic email templates to suit your business needs.
 
-In the project directory, you can run:
+## Future Improvements
+- **Account Management**: Users will be able to create accounts to save and manage their campaigns.
+- **Real-Time Analytics**: Track the performance of email campaigns, including open rates and engagement, to gain actionable insights.
 
-### `npm start`
+## Technologies Used
+- **Frontend**: React.js
+- **Backend**: Node.js
+- **AI Model**: Google Gemini API (Large Language Model)
+- **Hosting**: [Vercel](https://vercel.com)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Demo
+You can try out the app live here:  
+[https://mailify-ai.vercel.app/](https://mailify-ai.vercel.app/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
+To run MailifyAI locally, follow these steps:
+1. **Clone the repository**:  
+   `git clone https://github.com/yourusername/mailifyai.git`  
+   `cd mailifyai`
 
-### `npm test`
+2. **Install dependencies**:  
+   For the frontend:  
+   `cd frontend`  
+   `npm install`  
+   For the backend:  
+   `cd backend`  
+   `npm install`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. **Set up your Google Gemini API key**:  
+   You will need to obtain an API key from Google Gemini to use the email generation functionality. Once you have the key, create a `.env` file in the root directory and add the following line:
+    REACT_APP_GOOGLE_GEMINI_API_KEY=your_api_key_here
 
-### `npm run build`
+4. **Run the development servers**:  
+For the frontend:  
+`npm start`  
+For the backend:  
+`npm run start:server`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5. Open your browser and navigate to `http://localhost:3000` to view the app.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
+- Input your campaign details and the AI will generate a personalized email draft that you can review and send.
+- Customize your email content with dynamic templates tailored to your business.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributing
+We welcome contributions! To contribute to the project, follow these steps:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Create a new Pull Request.
 
-### `npm run eject`
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contact
+For any inquiries, you can contact us at [rk.kadyan5@gmail.com](mailto:rk.kadyan5@gmail.com).
