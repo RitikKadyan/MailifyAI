@@ -60,4 +60,4 @@ We welcome contributions! To contribute to the project, follow these steps:
 5. Create a new Pull Request.
 
 ## Contact
-For any inquiries, you can contact us at [rk.kadyan5@gmail.com](mailto:rk.kadyan5@gmail.com).
+For any inquiries, you can contact me at [rk.kadyan5@gmail.com](mailto:rk.kadyan5@gmail.com).
